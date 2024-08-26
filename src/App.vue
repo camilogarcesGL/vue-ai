@@ -1,8 +1,8 @@
 <script setup lang="ts">
-import TitleAI from './components/TitleAI.vue'
-console.log("change repo")
+import Navigation from './components/Navigation.vue'
+import './style.css'
 </script>
 
 <template>
-  <TitleAI />
+  <Navigation />
 </template>
