@@ -1,5 +1,8 @@
 <script setup lang="ts">
 import { ref } from 'vue';
+import Componenteskill from './Skills.vue';
+import Componentesuggestion from './Suggestions.vue';
+
 const activeTab = ref('skills'); 
 </script>
 
@@ -14,8 +17,12 @@ const activeTab = ref('skills');
   </div>
 
 <div class="generalContent">
-  <div class="contentSkills" v-if="activeTab === 'skills'">Content Skills</div>
-  <div v-if="activeTab === 'suggestions'"> Content Suggestions</div>
+  <div class="contentSkills" v-if="activeTab === 'skills'">
+    <Componenteskill></Componenteskill>
+  </div>
+  <div class="contentSuggestions" v-if="activeTab === 'suggestions'">
+    <Componentesuggestion></Componentesuggestion>
+  </div>
 </div>
 
 
@@ -32,9 +39,17 @@ const activeTab = ref('skills');
 }
 
 .contentSkills {
-  background-color: #999;
+  background-color:  #f2f2f2;
   margin: 4px;
   width: 50%;
+  height: 500px;
+}
+
+.contentSuggestions {
+  background-color: #f2f2f2;
+  margin: 4px;
+  width: 50%;
+  height: 500px;
 }
 
 .skills {

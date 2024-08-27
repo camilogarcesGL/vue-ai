@@ -1,8 +1,7 @@
 <template>
     <div class="flex mb-12">
         <div class="flex items-center mb-6">
-            <input type="checkbox" value="" class="focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
-            <label class="ms-2 text-sm font-medium text-gray-400 dark:text-gray-500">React</label>
+            <h3>Suggestion:</h3><h4> Mobex</h4>
         </div>
     </div>
 </template>
@@ -14,7 +13,7 @@
 
 <style>
 .linear {
-    background-color: #4CAF50;
+    background-color: #f6f6f6;
     height: 50px;
     width: 100%;
     text-align: center;
