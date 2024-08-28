@@ -1,26 +1,26 @@
+
 <template>
-    <div class="flex mb-12">
-        <div class="flex items-center mb-6">
-            <input type="checkbox" value="" class="focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
-            <label class="ms-2 text-sm font-medium text-gray-400 dark:text-gray-500">React</label>
+    <div class="flex flex-col mb-12">
+        <div v-for="skill in skillsAll" :key="skill" class="flex items-center mb-6">
+            <li>{{ skill }}</li>
         </div>
     </div>
 </template>
 
-
 <script setup>
+import { ref } from 'vue';
+const skillsAll = ref([
+    'React',
+        'Javascript',
+        'TypeScript',
+        'Node.js',
+        'Express.js',
+        'MongoDB',
+        'PostgreSQL',   
+]);
 
 </script>
 
 <style>
-.linear {
-    background-color: #4CAF50;
-    height: 50px;
-    width: 100%;
-    text-align: center;
-    vertical-align: middle;
-    display: table-cell;
-    color: white;
-    font-size: 24px;
-}
+
 </style>

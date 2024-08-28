@@ -1,8 +1,9 @@
-<script setup lang="ts">
+<script setup>
 import { ref } from 'vue';
-import Componenteskill from './Skills.vue';
+import  Componenteskill from './Skills.vue';
+import { defineAsyncComponent } from 'vue';
+import  CallAPI from './CallAPI.vue';
 import Componentesuggestion from './Suggestions.vue';
-
 const activeTab = ref('skills'); 
 </script>
 
@@ -19,6 +20,7 @@ const activeTab = ref('skills');
 <div class="generalContent">
   <div class="contentSkills" v-if="activeTab === 'skills'">
     <Componenteskill></Componenteskill>
+    <CallAPI />
   </div>
   <div class="contentSuggestions" v-if="activeTab === 'suggestions'">
     <Componentesuggestion></Componentesuggestion>
@@ -45,8 +47,12 @@ const activeTab = ref('skills');
   height: 500px;
 }
 
+.contentSkills ul li {
+  list-style-type: none;
+}
+
 .contentSuggestions {
-  background-color: #f2f2f2;
+  background-color:  #f2f2f2;
   margin: 4px;
   width: 50%;
   height: 500px;
