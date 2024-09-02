@@ -16,10 +16,10 @@
       };
     },
     mounted() {
-      this.obtenerNombres();
+      this.getNames();
     },
     methods: {
-      async obtenerNombres() {
+      async getNames() {
         const endpoint = 'http://localhost:4000/graphql';
   
         const graphQLClient = new GraphQLClient(endpoint);
@@ -33,9 +33,8 @@
         try {
           const data = await graphQLClient.request(query);
           this.names = data.names;
-          console.log('Los nombres son:', this.names);
         } catch (error) {
-          console.error('Error los names:', error);
+          console.error('Error in names:', error);
         }
       }
     }

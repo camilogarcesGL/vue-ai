@@ -1,22 +1,21 @@
 const express = require('express');
-const cors = require('cors'); // Importa el paquete cors
+const cors = require('cors');
 const { graphqlHTTP } = require('express-graphql');
 const { buildSchema, graphql } = require('graphql');
 
 
 const names = ['React', 'Javascript', 'TypeScript', 'NodeJs', 'Express', 'MongoDB', 'PostgreSQL'];
-// schema
+
 const schema = buildSchema(`
     type Query {
-        hello: String,
+        message: String,
         names: [String]
     }
 `);
 
-// resolvers
 const root = {
-    hello: () => {
-        return 'hola camilo'
+    message: () => {
+        return 'Welcome Sales Force'
     },
     names: () => {
         return names;
@@ -38,4 +37,4 @@ app.use('/graphql', graphqlHTTP({
 })
 );
 
-app.listen(4000, () => console.log('Servidor en uso http://localhost:4000/graphql'));
+app.listen(4000, () => console.log('Server lauched  http://localhost:4000/graphql'));

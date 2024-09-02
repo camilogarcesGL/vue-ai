@@ -1,7 +1,7 @@
 <template>
     <div>
       <textarea v-model="userInput" placeholder="Escribe tu mensaje"></textarea>
-      <button @click="sendMessage">Enviar</button>
+      <button @click="sendMessage">Send</button>
       <p v-if="response">{{ response }}</p>
     </div>
   </template>
@@ -21,7 +21,7 @@
       const result = await axios.post(
         'https://api.openai.com/v1/chat/completions',
         {
-          model: 'gpt-3.5-turbo', // Cambia a 'gpt-4' si prefieres usar ese modelo
+          model: 'gpt-3.5-turbo', // 'gpt-4'
           messages: [
             { role: 'system', content: 'Eres un asistente útil.' },
             { role: 'user', content: userInput.value },
