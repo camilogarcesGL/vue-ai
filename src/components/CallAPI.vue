@@ -10,8 +10,7 @@
   import { ref } from 'vue';
   import axios from 'axios';
   
-  const randomString = "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";
-  
+  const randomString = "";
   const userInput = ref('');
   const response = ref('');
 

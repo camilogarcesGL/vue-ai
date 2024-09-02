@@ -1,8 +1,13 @@
 <script setup>
 import { ref } from 'vue';
-import  Componenteskill from './Skills.vue';
+
 import { defineAsyncComponent } from 'vue';
+import CallGraphQL from './CallGraphQL.vue';
+
+
 import  CallAPI from './CallAPI.vue';
+
+
 import Componentesuggestion from './Suggestions.vue';
 const activeTab = ref('skills'); 
 </script>
@@ -19,7 +24,8 @@ const activeTab = ref('skills');
 
 <div class="generalContent">
   <div class="contentSkills" v-if="activeTab === 'skills'">
-    <Componenteskill></Componenteskill>
+
+    <CallGraphQL />
     <CallAPI />
   </div>
   <div class="contentSuggestions" v-if="activeTab === 'suggestions'">
