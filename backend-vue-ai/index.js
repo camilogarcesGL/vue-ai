@@ -11,6 +11,9 @@ const schema = buildSchema(`
         message: String,
         names: [String]
     }
+    type Mutation {
+    addNewName(newName:String): [String]
+    }
 `);
 
 const root = {
@@ -18,6 +21,10 @@ const root = {
         return 'Welcome Sales Force'
     },
     names: () => {
+        return names;
+    },
+    addNewName: ({ newName }) => {
+        names.push(newName);
         return names;
     }
 }
