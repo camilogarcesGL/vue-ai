@@ -4,7 +4,7 @@ const { graphqlHTTP } = require('express-graphql');
 const { buildSchema, graphql } = require('graphql');
 
 
-const names = ['React', 'Javascript', 'TypeScript', 'NodeJs', 'Express', 'MongoDB', 'PostgreSQL'];
+const names = ['Vue', 'React', 'Javascript', 'TypeScript', 'NodeJs', 'Express', 'MongoDB', 'PostgreSQL'];
 
 const schema = buildSchema(`
     type Query {
@@ -13,6 +13,7 @@ const schema = buildSchema(`
     }
     type Mutation {
     addNewName(newName:String): [String]
+    deleteNewName(nameToDelete:String): [String]
     }
 `);
 
@@ -26,6 +27,14 @@ const root = {
     addNewName: ({ newName }) => {
         names.push(newName);
         return names;
+    },
+    deleteNewName: ({ nameToDelete }) => {
+        const index = names.indexOf(nameToDelete);
+
+        if(index > -1) {
+            names.splice(index, 1);
+        }
+        return names;  
     }
 }
 
@@ -33,7 +42,7 @@ const app = express();
 
 app.use(cors({
     origin: 'http://localhost:5173', 
-    methods: ['GET', 'POST'],
+    methods: ['GET', 'POST', 'DELETE'],
     allowedHeaders: ['Content-Type', 'Authorization'],   
 }));
 

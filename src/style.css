@@ -1,3 +1,16 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.classbutton {
+display: flex;
+}
+
+.classbuttonadded {
+    display: flex;
+    color: white;
+    background-color: #4CAF50;
+    justify-content: center;
+    padding: 2px;
+    border-radius: 8px;
+}
