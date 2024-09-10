@@ -1,13 +1,29 @@
 <template>
-    <div class="flex mb-12">
-        <div class="flex items-center mb-6">
-            <h3>Suggestion:</h3><h4> Mobex</h4>
-        </div>
+    <div class="general">
+    <div class="contentbuttonsuggestions">
+        <h4>According to your skills we suggest the following Study Item for your career path</h4>
     </div>
+    <div class="contentbuttonsuggestionsitem">
+        {{ result.name }}
+    </div>
+</div>
 </template>
 
 
 <script setup>
+
+const suggestions = ['Node', 'GraphQL', 'FullStack', 'Stack MERN', 'NodeJs', 'AWS3', 'Docker', 'VUE'];
+
+function getRandomNameWithIndex(suggestions) {
+ 
+  const randomIndex = Math.floor(Math.random() * suggestions.length);
+  const name = suggestions[randomIndex];
+
+  return { index: randomIndex, name: name }; 
+}
+
+
+const result = getRandomNameWithIndex(suggestions);
 
 </script>
 

@@ -3,12 +3,8 @@ import { ref } from 'vue';
 
 import { defineAsyncComponent } from 'vue';
 import CallGraphQL from './CallGraphQL.vue';
-
-
-import  CallAPI from './CallAPI.vue';
-
-
 import Componentesuggestion from './Suggestions.vue';
+
 const activeTab = ref('skills'); 
 </script>
 
