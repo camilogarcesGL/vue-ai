@@ -4,13 +4,42 @@
 
 .classbutton {
 display: flex;
+justify-content: center;
+margin-top: 20px;
+margin-bottom: 20px;
 }
 
 .classbuttonadded {
     display: flex;
     color: white;
-    background-color: #4CAF50;
+    background-color: #1aacef;
     justify-content: center;
     padding: 2px;
-    border-radius: 8px;
+    border-radius: 5px;
+    min-width: 50px;
+    margin-left: 10px;
+    margin-right: 5px;
+}
+
+.contentbuttonskill {
+    display: flex;
+    justify-content: center;
+}
+
+.classbuttonskill {
+    color: white;
+    background-color: #1aacef;
+    height: 33px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    width: auto;
+    border-radius: 15px;
+    padding-left: 10px;
+    text-align: center;
+    padding-right: 10px;
+    padding-top: 2px;
+}
+
+.tab {
+    cursor: pointer;
 }

@@ -24,9 +24,7 @@ const activeTab = ref('skills');
 
 <div class="generalContent">
   <div class="contentSkills" v-if="activeTab === 'skills'">
-
     <CallGraphQL />
-    <CallAPI />
   </div>
   <div class="contentSuggestions" v-if="activeTab === 'suggestions'">
     <Componentesuggestion></Componentesuggestion>
