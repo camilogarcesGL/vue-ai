@@ -1,10 +1,18 @@
 <template>
     <div class="classbutton">
-    <input v-model="newName" type="text" placeholder=" New skill">
-    <button  class="classbuttonadded" type="button" @click="addNewName">
-      <span>Add</span>
-    </button>
-  </div>
+      <input v-model="newName" type="text" placeholder=" New skill">
+      <button  class="classbuttonadded" type="button" @click="addNewName">
+        <span>Add</span>
+      </button>
+    </div>
+  
+    <div v-if="showModal" class="modal"> 
+      <div class="modal-content">
+        <p>Please enter a skill before adding.</p>
+        <button @click="showModal = false">Close</button>
+      </div>
+    </div>
+
     <div class="contentbuttonskill">
       <ul>
         <li class="classbuttonskill flex items-center justify-between" v-for="name in names" :key="name">
@@ -21,12 +29,12 @@
   
   <script>
   import { GraphQLClient, gql } from 'graphql-request';
-  
   export default {
     data() {
       return {
         names: [],
-        newName: ''
+        newName: '',
+        showModal: false, 
       };
     },
     mounted() {
@@ -53,8 +61,11 @@
       },
 
       async addNewName() {
+        if (this.newName.trim() === '') {
+          this.showModal = true; 
+          return;
+        }
         const endpoint = 'http://localhost:4000/graphql';
-
         const graphQLClient = new GraphQLClient(endpoint);
 
         const mutation = gql`
@@ -94,3 +105,24 @@
     }
   };
   </script>
+
+<style>
+
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); 
+  display: flex;
+  align-items: center;
+  justify-content: center; 
+}
+
+.modal-content {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 5px;
+}
+</style> 
