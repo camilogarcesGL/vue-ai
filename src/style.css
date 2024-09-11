@@ -61,6 +61,7 @@ margin-bottom: 20px;
     text-align: center;
     color: white;
     margin-left: 25%;
+    padding-top: 10px;
 }
 
 .general {
@@ -68,5 +69,17 @@ margin-bottom: 20px;
     justify-content: center;
     text-align: center;
     flex-direction: column;
+}
+
+.classbuttonclosed {
+    display: flex;
+    color: white;
+    background-color: #f40c0c;
+    justify-content: center;
+    padding: 2px;
+    border-radius: 5px;
+    min-width: 50px;
+    margin-left: 10px;
+    margin-right: 5px;
 }
 

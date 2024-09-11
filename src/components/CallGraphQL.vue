@@ -8,8 +8,8 @@
   
     <div v-if="showModal" class="modal"> 
       <div class="modal-content">
-        <p>Please enter a skill before adding.</p>
-        <button @click="showModal = false">Close</button>
+        <p>Please enter a skill before add.</p>
+        <button class="classbuttonclosed" type="button" @click="showModal = false">Close</button>
       </div>
     </div>
 
@@ -124,5 +124,7 @@
   background-color: #fff;
   padding: 20px;
   border-radius: 5px;
+  justify-content: center;
+  display: flex;
 }
 </style> 
