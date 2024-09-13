@@ -1,56 +1,38 @@
 const express = require('express');
+const mongoose = require('mongoose');
 const cors = require('cors');
 const { graphqlHTTP } = require('express-graphql');
 const { buildSchema, graphql } = require('graphql');
 
 
-const names = ['Vue', 'React', 'Javascript', 'TypeScript', 'NodeJs', 'Express', 'MongoDB', 'PostgreSQL'];
-
-const schema = buildSchema(`
-    type Query {
-        message: String,
-        names: [String]
-    }
-    type Mutation {
-    addNewName(newName:String): [String]
-    deleteNewName(nameToDelete:String): [String]
-    }
-`);
-
-const root = {
-    message: () => {
-        return 'Welcome Sales Force'
-    },
-    names: () => {
-        return names;
-    },
-    addNewName: ({ newName }) => {
-        names.push(newName);
-        return names;
-    },
-    deleteNewName: ({ nameToDelete }) => {
-        const index = names.indexOf(nameToDelete);
-
-        if(index > -1) {
-            names.splice(index, 1);
-        }
-        return names;  
-    }
-}
-
 const app = express();
 
-app.use(cors({
-    origin: 'http://localhost:5173', 
-    methods: ['GET', 'POST', 'DELETE'],
-    allowedHeaders: ['Content-Type', 'Authorization'],   
-}));
+app.use(cors());
+app.use(express.json());
 
-app.use('/graphql', graphqlHTTP({
-    schema: schema,
-    rootValue: root,
-    graphiql: true
-})
-);
-
-app.listen(4000, () => console.log('Server lauched  http://localhost:4000/graphql'));
+mongoose.connect('mongodb://localhost:27017/vue_db/mis_skills', {
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+  })
+  .then(() => console.log('Conected to MongoDB'))
+  .catch(err => console.error('Error to connect MongoDB', err));
+  
+  const MiColeccionSchema = new mongoose.Schema({
+    name: String,
+    description: String,
+  });
+  
+  const MiColeccion = mongoose.model('mis_skills', MiColeccionSchema);
+  
+  app.get('/api/mis_skills', async (req, res) => {
+    try {
+      const items = await MiColeccion.find();
+      res.json(items);
+    } catch (error) {
+      console.error('Error', error);
+      res.status(500).send('Error');
+    }
+  });
+  
+  const PORT = process.env.PORT || 5000;
+  app.listen(PORT, () => console.log(`Server on ${PORT}`));
