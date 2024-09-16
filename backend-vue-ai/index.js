@@ -33,6 +33,34 @@ mongoose.connect('mongodb://localhost:27017/db_vue', {
       res.status(500).send('Error');
     }
   });
+
+  app.post('/api/mis_skills', async (req, res) => {
+    try {
+        const newItem = new MiColeccion({
+            name: req.body.name,
+            description: req.body.description || '',
+        });
+
+        const savedItem = await newItem.save();
+        res.status(201).json(savedItem);
+    } catch (error) {
+        console.error('Error', error);
+        res.status(500).send('Error adding item');
+    }
+});
+
+app.delete('/api/mis_skills/:id', async (req, res) => {
+    try {
+        const deletedItem = await MiColeccion.findByIdAndDelete(req.params.id);
+        if (!deletedItem) {
+            return res.status(404).send('Item not found');
+        }
+        res.status(200).json(deletedItem);
+    } catch (error) {
+        console.error('Error', error);
+        res.status(500).send('Error deleting item');
+    }
+});
   
   const PORT = process.env.PORT || 5000;
   app.listen(PORT, () => console.log(`Server on ${PORT}`));
