@@ -24,6 +24,27 @@ margin-bottom: 20px;
 .contentbuttonskill {
     display: flex;
     justify-content: center;
+
+}
+
+.listSkill {
+    width: auto;
+    height: auto;
+    line-height: 1;
+    padding: 5px;
+    background-color: #1aacef;
+    border-radius: 5px;
+    display: flex;
+    justify-content: flex-end;
+    margin: 5px;;
+}
+
+.iconDelete {
+    color: white;
+}
+
+.skilltext {
+    margin-right: 8px;
 }
 
 .classbuttonskill {
