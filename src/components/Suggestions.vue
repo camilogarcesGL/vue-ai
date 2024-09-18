@@ -11,10 +11,12 @@
 
 
 <script setup>
+import { onMounted } from 'vue';
+import { dataResponse } from "./Api.js"
 
-const suggestions = ['Node', 'GraphQL', 'FullStack', 'Stack MERN', 'NodeJs', 'AWS3', 'Docker', 'VUE'];
+const suggestions = dataResponse.value.map((e)=>e.name);
 
-function getRandomNameWithIndex(suggestions) {
+ function getRandomNameWithIndex(suggestions) {
  
   const randomIndex = Math.floor(Math.random() * suggestions.length);
   const name = suggestions[randomIndex];
