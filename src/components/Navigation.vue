@@ -13,7 +13,7 @@ const activeTab = ref('skills');
   <nav class="navbar">
     <div class="contentTabs">
       <div class="tab skills" :class="{ 'active': activeTab === 'skills' }" @click="activeTab = 'skills'">Skills</div>
-      <div class="tab suggestions" :class="{ 'active': activeTab === 'suggestions' }" @click="activeTab = 'suggestions'">suggestions</div>
+      <div class="tab suggestions" :class="{ 'active': activeTab === 'suggestions' }" @click="activeTab = 'suggestions'">Suggestions</div>
     </div>
   </nav>
   </div>

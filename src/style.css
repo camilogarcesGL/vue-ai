@@ -14,11 +14,12 @@ margin-bottom: 20px;
     color: white;
     background-color: #1aacef;
     justify-content: center;
-    padding: 2px;
+    padding-top: 10px;
     border-radius: 5px;
     min-width: 50px;
     margin-left: 10px;
     margin-right: 5px;
+    vertical-align: middle;
 }
 
 .contentbuttonskill {
@@ -40,11 +41,12 @@ margin-bottom: 20px;
 }
 
 .iconDelete {
-    color: white;
+    color: #0d80ad;
 }
 
 .skilltext {
     margin-right: 8px;
+    color: #fff;
 }
 
 .classbuttonskill {

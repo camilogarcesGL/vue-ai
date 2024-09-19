@@ -1,14 +1,12 @@
 <template>
     <div class="classbutton">
-      <input v-model="newName" type="text" placeholder=" New skill">
-      <button  class="classbuttonadded" type="button" @click="handleAddItem">
-        <span>Add</span>
-      </button>
+      <input v-model="newName" type="text" placeholder=" New skill" class="input-with-padding">
+      <button  class="classbuttonadded" type="button" @click="handleAddItem">Add</button>
     </div>
   
     <div v-if="showModal" class="modal"> 
       <div class="modal-content">
-        <p>Please enter a skill before add.</p>
+        <p>Please enter a skill before add</p>
         <button class="classbuttonclosed" type="button" @click="showModal = false">Close</button>
       </div>
     </div>
@@ -54,5 +52,9 @@
   border-radius: 5px;
   justify-content: center;
   display: flex;
+}
+
+.input-with-padding {
+  padding: 10px;
 }
 </style> 
