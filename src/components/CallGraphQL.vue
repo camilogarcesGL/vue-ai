@@ -1,3 +1,11 @@
+<script setup>
+  import { onMounted } from 'vue';
+  import { getItems, handleDeleteItem, handleAddItem, dataResponse,addItem, newName, showModal } from "./Api.js"
+  onMounted(() => {
+    getItems();
+  });
+</script>
+
 <template>
     <div class="classbutton">
       <input v-model="newName" type="text" placeholder=" New skill" class="input-with-padding">
@@ -23,15 +31,9 @@
         </li>
       </ul>
     </div>
-  </template>
+</template>
   
-  <script setup>
-  import { onMounted } from 'vue';
-  import { getItems, handleDeleteItem, handleAddItem, dataResponse,addItem, newName, showModal } from "./Api.js"
-  onMounted(() => {
-    getItems();
-  });
-  </script>
+
 
 <style>
 .modal {
