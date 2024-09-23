@@ -17,8 +17,6 @@ describe('API functions', () => {
 
 
   it('shows modal when adding an empty item', async () => {
-    newName.value = '';
-
     await handleAddItem();
     expect(showModal.value).toBe(true); 
   });
