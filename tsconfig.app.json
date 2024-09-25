@@ -5,6 +5,14 @@
     "module": "ESNext",
     "lib": ["ES2020", "DOM", "DOM.Iterable"],
     "skipLibCheck": true,
+    "jsx": "preserve",
+    "allowJs": true,
+    "checkJs": false,
+    "moduleResolution": "node",
+    "lib": ["esnext", "dom", "dom.iterable"],
+    "strict": true,
+    "types": ["vite/client"],
+    "noEmit": true, 
 
     /* Bundler mode */
     "moduleResolution": "bundler",
