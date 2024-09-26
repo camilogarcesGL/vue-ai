@@ -1,11 +1,9 @@
 <script setup>
 import { ref } from 'vue';
-
-import { defineAsyncComponent } from 'vue';
 import CallGraphQL from './CallGraphQL.vue';
 import Componentesuggestion from './Suggestions.vue';
-
-const activeTab = ref('skills'); 
+import { TabName } from './types';
+const activeTab = ref<TabName>('skills'); 
 </script>
 
 <template>
