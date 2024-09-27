@@ -27,38 +27,3 @@ const activeTab = ref('skills');
 
 </template>
 
-<style>
-.contentTabs {
-  display: flex;
-  justify-content: flex-end;
-}
-.generalContent {
-  display: flex;
-  justify-content: flex-end;
-}
-
-.contentSkills {
-  background-color:  #f2f2f2;
-  margin: 4px;
-  width: 50%;
-  height: 500px;
-}
-
-.contentSkills ul li {
-  list-style-type: none;
-}
-
-.contentSuggestions {
-  background-color:  #f2f2f2;
-  margin: 4px;
-  width: 50%;
-  height: 500px;
-}
-
-.skills {
-  margin: 4px;
-}
-.suggestions{
-  margin: 4px;
-}
-</style>
