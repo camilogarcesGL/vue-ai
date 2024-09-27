@@ -2,8 +2,7 @@
 import { ref } from 'vue';
 import CallGraphQL from './CallGraphQL.vue';
 import Componentesuggestion from './Suggestions.vue';
-import { TabName } from './types';
-const activeTab = ref<TabName>('skills'); 
+const activeTab = ref('skills'); 
 </script>
 
 <template>
