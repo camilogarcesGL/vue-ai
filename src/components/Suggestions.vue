@@ -39,14 +39,5 @@ onMounted(() => {
 </script>
 
 <style>
-.linear {
-    background-color: #f6f6f6;
-    height: 50px;
-    width: 100%;
-    text-align: center;
-    vertical-align: middle;
-    display: table-cell;
-    color: white;
-    font-size: 24px;
-}
+
 </style>

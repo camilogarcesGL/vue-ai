@@ -127,47 +127,58 @@
 }
   
 .modal-content {
-background-color: #fff;
-padding: 20px;
-border-radius: 5px;
-justify-content: center;
-display: flex;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    justify-content: center;
+    display: flex;
 }
 
 .input-with-padding {
-padding: 10px;
+    padding: 10px;
 }
 
 .contentTabs {
-display: flex;
-justify-content: flex-end;
+    display: flex;
+    justify-content: flex-end;
 }
 .generalContent {
-display: flex;
-justify-content: flex-end;
+    display: flex;
+    justify-content: flex-end;
 }
 
 .contentSkills {
-background-color:  #f2f2f2;
-margin: 4px;
-width: 50%;
-height: 500px;
+    background-color:  #f2f2f2;
+    margin: 4px;
+    width: 50%;
+    height: 500px;
 }
 
 .contentSkills ul li {
-list-style-type: none;
+    list-style-type: none;
 }
 
 .contentSuggestions {
-background-color:  #f2f2f2;
-margin: 4px;
-width: 50%;
-height: 500px;
+    background-color:  #f2f2f2;
+    margin: 4px;
+    width: 50%;
+    height: 500px;
 }
 
 .skills {
-margin: 4px;
+    margin: 4px;
 }
 .suggestions{
-margin: 4px;
+    margin: 4px;
+}
+
+.linear {
+background-color: #f6f6f6;
+    height: 50px;
+    width: 100%;
+    text-align: center;
+    vertical-align: middle;
+    display: table-cell;
+    color: white;
+    font-size: 24px;
 }
