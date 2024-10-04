@@ -173,7 +173,7 @@
 }
 
 .linear {
-background-color: #f6f6f6;
+    background-color: #f6f6f6;
     height: 50px;
     width: 100%;
     text-align: center;
@@ -181,4 +181,8 @@ background-color: #f6f6f6;
     display: table-cell;
     color: white;
     font-size: 24px;
+}
+
+.navbar {
+    display: flex;
 }

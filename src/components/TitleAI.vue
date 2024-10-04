@@ -16,9 +16,3 @@ const activeTab = ref<TabName>('skills');
     </div>
   </nav>
 </template>
-
-<style scoped>
-.navbar {
-  display: flex;
-}
-</style>
