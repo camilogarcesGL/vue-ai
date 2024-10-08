@@ -13,7 +13,7 @@ const activeTab = ref('skills');
       <div class="tab suggestions" :class="{ 'active': activeTab === 'suggestions' }" @click="activeTab = 'suggestions'">Suggestions</div>
     </div>
   </nav>
-  </div>
+ </div>
 
 <div class="generalContent">
   <div class="contentSkills" v-if="activeTab === 'skills'">
@@ -23,7 +23,9 @@ const activeTab = ref('skills');
     <Componentesuggestion></Componentesuggestion>
   </div>
 </div>
-
+<div class="footer">
+  <div class="footerContent">Skills</div>
+</div>
 
 </template>
 

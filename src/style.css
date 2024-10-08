@@ -142,9 +142,10 @@
     display: flex;
     justify-content: flex-end;
 }
+
 .generalContent {
     display: flex;
-    justify-content: flex-end;
+    justify-content: center;
 }
 
 .contentSkills {
@@ -190,4 +191,24 @@
 .navbarTitle {
   display: flex;
   justify-content: center;
+}
+
+.footer {
+  width: 100%;
+  height: auto;
+  background-color: cadetblue;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  padding-bottom: 0.5%;
+  display: flex;
+  justify-content: center;
+  padding-top: 0.5% ;
+}
+
+.footerContent {
+  font-size: 260px;
+  font-weight: bold;
+  color: whitesmoke;
+  opacity: 0.1;
 }
