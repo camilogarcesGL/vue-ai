@@ -186,3 +186,8 @@
 .navbar {
     display: flex;
 }
+
+.navbarTitle {
+  display: flex;
+  justify-content: center;
+}

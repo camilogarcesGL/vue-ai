@@ -6,7 +6,7 @@ const activeTab = ref('skills');
 </script>
 
 <template>
- <div class="bg-gray-100 p-4 rounded-lg shadow-md">
+ <div class="navbarTitle bg-gray-100 p-4 rounded-lg shadow-md">
   <nav class="navbar">
     <div class="contentTabs">
       <div class="tab skills" :class="{ 'active': activeTab === 'skills' }" @click="activeTab = 'skills'">Skills</div>
