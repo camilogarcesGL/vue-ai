@@ -124,6 +124,7 @@
     display: flex;
     align-items: center;
     justify-content: center; 
+    z-index: 1;
 }
   
 .modal-content {
@@ -211,4 +212,8 @@
   font-weight: bold;
   color: whitesmoke;
   opacity: 0.1;
+}
+
+.tabDivision {
+  line-height: 1.9;
 }
