@@ -217,3 +217,16 @@
 .tabDivision {
   line-height: 1.9;
 }
+
+.contentLogin {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #174375;
+    opacity: 50%;
+}
+
+.login {
+    display: grid;
+}
